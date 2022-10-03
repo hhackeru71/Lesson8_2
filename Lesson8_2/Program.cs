@@ -12,15 +12,13 @@ namespace Lesson8_2
             //במידה והאות a יש לשנות את כל האותיות לאותיות קטנות ToLower
             //אחרת המחרוזת תשתנה לאותיות גדולות ע"י ToUpper
             //להדפיס את המחרוזת בסוף
-            Console.WriteLine("enter a course");
-            string course =  Console.ReadLine();
-            course = course.ToLower();
-            if(course.IndexOf('m')>=0)
-                Console.WriteLine("yes");
-            else
-                Console.WriteLine("no");
-
-
+            //Console.WriteLine("enter a course");
+            //string course =  Console.ReadLine();
+            //course = course.ToLower();
+            //if(course.IndexOf('m')>=0)
+            //    Console.WriteLine("yes");
+            //else
+            //    Console.WriteLine("no");
             //לקלוט מהשתמש קורס מחרוזת באנגלית 
             //לבדוק האם האות m קיימת במחרוזת 
             //במידה והאות קיימת להדפיס yes
@@ -40,6 +38,12 @@ namespace Lesson8_2
             //Console.WriteLine(name.Length);
             int index = name.IndexOf('b');
             Console.WriteLine(index);
+            string str = null;
+            string str2 = "";
+            //פונקציה שבודקת האם 
+            Console.WriteLine(str == str2);
+            //השוואה בין מחרוזות האם הם שוות אחת לשניה
+            Console.WriteLine(str2.Equals(str));
 
             //while (true)
             //{
