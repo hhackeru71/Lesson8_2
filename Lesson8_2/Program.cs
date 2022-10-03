@@ -6,10 +6,26 @@ namespace Lesson8_2
     {
         static void Main(string[] args)
         {
-            while(true)
+
+            //לקלוט מהשתמש מדינה באנגלית
+            //לעשות בדיקה האם אות a נמצאת בתוך המחרוזת
+            //במידה והאות a יש לשנות את כל האותיות לאותיות קטנות ToLower
+            //אחרת המחרוזת תשתנה לאותיות גדולות ע"י ToUpper
+            //להדפיס את המחרוזת בסוף
+
+
+            string name = "Yarin";
+            //שינוי מחרוזת לאותיות גדולות
+            Console.WriteLine(name.ToUpper());
+            //שינוי מחרוזת לאותיות קטנות
+            Console.WriteLine(name.ToLower());
+            //אורך המחרוזת 
+            Console.WriteLine(name.Length);
+
+
+            while (true)
             {
                 Console.WriteLine("enter name");
-                string name = Console.ReadLine();
                 //אורך של המחרוזת 
                 // Console.WriteLine(name.Length);
                 //char firstChar = name[0];
@@ -23,7 +39,7 @@ namespace Lesson8_2
                 int flag = 0;
                 for (int i = 0; i < name.Length; i++)
                 {
-                    if (name[i] == 'y' || name[i] == 'Y')
+                    if (name[i] == 'y')
                     {
                         flag = 1;
                         Console.WriteLine("yes");
@@ -32,7 +48,7 @@ namespace Lesson8_2
                 }
                 if (flag == 0)
                     Console.WriteLine("no");
+
             }
-        }
     }
 }
