@@ -12,8 +12,9 @@ namespace Lesson8_2
             //במידה והאות a יש לשנות את כל האותיות לאותיות קטנות ToLower
             //אחרת המחרוזת תשתנה לאותיות גדולות ע"י ToUpper
             //להדפיס את המחרוזת בסוף
-
-
+            ChangeStringToUpperOrLowerL();
+            ChangeStringToUpperOrLowerI();
+            ChangeStringToUpperOrLowerA();
             string name = "Yarin";
             //שינוי מחרוזת לאותיות גדולות
             Console.WriteLine(name.ToUpper());
@@ -50,5 +51,81 @@ namespace Lesson8_2
                     Console.WriteLine("no");
 
             }
+
+
+            static void ChangeStringToUpperOrLowerL()
+            {
+                Console.WriteLine("enter a country name");
+                string countryName = Console.ReadLine();
+                int flag = 0;
+                for (int i = 0; i < countryName.Length; i++)
+                {
+                    if (countryName[i] == 'a')
+                    {
+                        flag = 1;
+                        break;
+                    }
+                }
+                if (flag == 1)
+                {
+                    Console.WriteLine(countryName.ToLower());
+                }
+                else
+                {
+                    Console.WriteLine(countryName.ToUpper());
+
+                }
+
+            }
+
+            static void ChangeStringToUpperOrLowerI()
+            {
+                System.Console.WriteLine("Please enter a country:");
+                string country = Console.ReadLine();
+                bool flag = true;
+
+                foreach (char letter in country)
+                {
+                    if (letter == 'a' || letter == 'A')
+                    {
+                        country = country.ToLower();
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if (flag)
+                {
+                    country = country.ToUpper();
+                }
+
+                System.Console.WriteLine(country);
+
+            }
+        }
+
+         static void ChangeStringToUpperOrLowerA()
+        {
+            Console.WriteLine("please enter a country");
+
+            string country = Console.ReadLine();
+            bool flag = false;
+            for (int i = 0; i < country.Length; i++)
+            {
+                char currentChar = country[i];
+                if (currentChar == 'a')
+                {
+                    country = country.ToLower();
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag == false)
+            {
+                country = country.ToUpper();
+            }
+            Console.WriteLine(country);
+
+        }
     }
 }
